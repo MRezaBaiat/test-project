@@ -1,20 +1,16 @@
-import * as React from 'react';
-import { View } from 'react-native';
-import MapView,{ Marker } from 'react-native-maps';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from './navigation/app.navigator';
+import RootStack from './navigation/routes';
 
-export default function App() {
+export default function App () {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <MapView style={{
-        width: "100%",
-        height: "100%",
-      }} />
-    </View>
+            <Provider store={store}>
+              <NavigationContainer ref={AppNavigator.setTopLevelNavigator}>
+                <RootStack/>
+              </NavigationContainer>
+            </Provider>
   );
 }
