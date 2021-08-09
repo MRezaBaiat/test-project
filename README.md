@@ -10,7 +10,6 @@ just type `yarn && yarn android` to run the application
 - Created a button component since it was used multiple times
 - Took almost 2 hours to complete, so do not expect some super fantasy UI, since as you mentioned it was not the point =)
 - Since using a non google geocoder , only addresses in USA are supported
-- Using throttler for geocoder
 - Using a basic throttler for geocoder
 - Whenever you select a location from dropdown menu , camera will be focused to the location attached to it
 
